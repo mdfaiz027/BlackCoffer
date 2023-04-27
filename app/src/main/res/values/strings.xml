@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="save_explore"><![CDATA[Save & Explore]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="my_spinner_items">
+        <item>Available | Hey Let Us Connect</item>
+        <item>Away | Stay Discreet And Watch</item>
+        <item>Busy | Do Not Disturb | Will Catch Up Later</item>
+        <item>SOS | Emergency! Need Assistance! HELP</item>
+    </string-array>
+
+
+</resources>

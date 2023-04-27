@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/availability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Select your availability"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@id/availabilitySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/availability" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Add Your Status"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/availabilitySpinner" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|top"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/characterCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:text="0/250"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Select Hyper local Distance"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:valueFrom="1.0"
+        android:valueTo="100.0"
+        android:stepSize="1"
+        app:tickVisible="false"
+        tools:layout_editor_absoluteX="209dp"
+        tools:layout_editor_absoluteY="660dp"
+        app:labelBehavior="floating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distance"/>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:text="1 Km"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:text="100 Km"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <TextView
+        android:id="@+id/selectPurpose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Select Purpose"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectPurpose">
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Coffee"
+            android:background="@color/chip_color_selector"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Business"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toEndOf="@+id/chip_coffee"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_hobbies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Hobbies"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toEndOf="@+id/chip_business"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_friendship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Friendship"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_coffee" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="8dp"
+            android:text="Movies"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toEndOf="@+id/chip_friendship"
+            app:layout_constraintTop_toBottomOf="@+id/chip_business" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_dining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="8dp"
+            android:text="Dining"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toEndOf="@+id/chip_movies"
+            app:layout_constraintTop_toBottomOf="@+id/chip_business" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_dating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Dating"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip_friendship" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_matrimony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="8dp"
+            android:text="Matrimony"
+            app:chipCornerRadius="15dp"
+            app:layout_constraintStart_toEndOf="@+id/chip_dating"
+            app:layout_constraintTop_toBottomOf="@+id/chip_movies" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>\
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/save_explore"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
