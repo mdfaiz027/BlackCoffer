@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".briefcase.BriefcaseFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,7 +68,8 @@
         android:layout_marginBottom="16dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:backgroundTint="@color/dark_blue"
+        app:tint="@color/white"
+        app:backgroundTint="@color/dark_blue"
         app:srcCompat ="@drawable/add"
         app:fabSize="normal" />
 
