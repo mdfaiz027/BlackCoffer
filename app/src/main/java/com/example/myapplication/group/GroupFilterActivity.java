@@ -1,18 +1,19 @@
-package com.example.myapplication;
+package com.example.myapplication.group;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
-import com.example.myapplication.group_fragments.FilterFragment;
+import com.example.myapplication.MainActivity;
+import com.example.myapplication.R;
+import com.example.myapplication.group.GroupFilterFragment;
 
-public class FilterActivity extends AppCompatActivity {
+public class GroupFilterActivity extends AppCompatActivity {
 
-    private FilterFragment filterFragment;
+    private GroupFilterFragment groupFilterFragment;
     private ImageView cancel_btn;
 
     @Override
@@ -20,9 +21,9 @@ public class FilterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
 
-        filterFragment = new FilterFragment(); // replace MyFragment with the name of your fragment class
+        groupFilterFragment = new GroupFilterFragment(); // replace MyFragment with the name of your fragment class
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.add(R.id.fragment_container, filterFragment);
+        transaction.add(R.id.fragment_container, groupFilterFragment);
         transaction.commit();
 
         cancel_btn = findViewById(R.id.cancel_button);

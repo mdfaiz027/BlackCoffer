@@ -9,7 +9,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".group_fragments.FilterFragment">
+    tools:context=".group.GroupFilterFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profession_cardView"
@@ -30,6 +30,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:text="Profession|University|Company"
+                android:textColor="@color/dark_blue"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +42,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Profession"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/headline_profession" />
 
@@ -67,6 +69,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="University Name"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_profession" />
 
@@ -93,6 +96,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Company Name"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_university_name" />
 
@@ -138,6 +142,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:text="Location"
+                android:textColor="@color/dark_blue"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -149,6 +154,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Hometown"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/headline_location" />
 
@@ -175,6 +181,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Lives In"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_hometown" />
 
@@ -220,6 +227,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:text="Preference"
+                android:textColor="@color/dark_blue"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -231,6 +239,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Gender"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/headline_preference" />
 
@@ -245,13 +254,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Gender">
 
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/gender_chip_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
                     android:text="Male"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -259,10 +276,13 @@
                     android:text="Female"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/transgender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Transgender"/>
+
+                </com.google.android.material.chip.ChipGroup>
 
             </LinearLayout>
 
@@ -273,6 +293,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Hobbies"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ll_gender" />
 
@@ -299,6 +320,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Movies"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_hobbies" />
 
@@ -325,6 +347,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Food"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_movies" />
 
@@ -336,7 +359,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/border2"
-                android:hint="Enter movies to filter"
+                android:hint="Enter food to filter"
                 android:inputType="text"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
@@ -351,6 +374,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Sports"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_food" />
 
@@ -377,6 +401,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Others"
+                android:textColor="@color/dark_blue"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_sports" />
 
@@ -396,10 +421,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="Smokes"
-                    app:layout_constraintTop_toTopOf="@id/cl_others"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textColor="@color/dark_blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/cl_others" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch_smokes"
@@ -415,10 +440,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="Drinks"
-                    app:layout_constraintTop_toBottomOf="@id/tv_smokes"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:textColor="@color/dark_blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_smokes" />
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/switch_drinks"
@@ -440,10 +465,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/preference_cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ll_profile_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp">
+
+            <TextView
+                android:id="@+id/headline_profile_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Completion Score"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/headline_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0-100"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/range_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:minSeparation="5dp"
+                app:tickVisible="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:values="@array/slider_values"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headline_score" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/purpose_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_score_cardView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -456,6 +538,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:text="Purpose"
+                android:textColor="@color/dark_blue"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

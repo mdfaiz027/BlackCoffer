@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.briefcase;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,8 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.group.GroupFilterActivity;
+import com.example.myapplication.R;
 import com.example.myapplication.adapter.BriefcaseRecyclerViewAdapter;
-import com.example.myapplication.adapter.GroupRecyclerViewAdapter;
 import com.example.myapplication.model.MyModel;
 
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ public class BriefcaseFragment extends Fragment {
         filter = view.findViewById(R.id.filter);
 
         filter.setOnClickListener(view1 -> {
-            Intent intent = new Intent(getContext(), FilterActivity.class);
+            Intent intent = new Intent(getContext(), GroupFilterActivity.class);
             startActivity(intent);
         });
 

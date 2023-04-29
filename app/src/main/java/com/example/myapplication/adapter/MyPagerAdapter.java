@@ -1,17 +1,12 @@
 package com.example.myapplication.adapter;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.myapplication.BriefcaseFragment;
-import com.example.myapplication.GroupFragment;
-import com.example.myapplication.MarketFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.myapplication.briefcase.BriefcaseFragment;
+import com.example.myapplication.group.GroupFragment;
+import com.example.myapplication.market.MarketFragment;
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
 
