@@ -81,8 +81,10 @@
                         android:layout_height="0dp"
                         android:layout_marginStart="2dp"
                         android:layout_marginTop="5dp"
-                        android:progress="70"
-                        app:trackThickness="5dp" />
+                        android:progress="30"
+                        app:indicatorSize="100dp"
+                        app:trackCornerRadius="10dp"
+                        app:trackThickness="10dp" />
 
                 </LinearLayout>
 

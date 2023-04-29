@@ -141,17 +141,17 @@
                 android:id="@+id/profile_range_slider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
                 android:valueFrom="0"
                 android:valueTo="100"
-                app:minSeparation="5dp"
-                app:tickVisible="false"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                app:values="@array/slider_values"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profile_score" />
+                app:layout_constraintTop_toBottomOf="@id/profile_score"
+                app:minSeparation="5dp"
+                app:tickVisible="false"
+                app:values="@array/slider_values" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
