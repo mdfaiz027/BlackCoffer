@@ -14,17 +14,15 @@ import android.widget.Toast;
 import com.example.myapplication.R;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
-import com.google.android.material.slider.LabelFormatter;
 import com.google.android.material.slider.RangeSlider;
 
 import java.util.List;
 
 public class GroupFilterFragment extends Fragment {
 
-    private Chip coffee, business, hobbies, friendship, movies, dining, dating, matrimony;
-    private ChipGroup gender;
-
-    private TextView headline_score;
+    private Chip coffee, business, hobbies, friendship, movies, dining, dating, matrimony, male, female, transgender;
+    private ChipGroup selectGender;
+    private TextView headlineScore;
     private RangeSlider rangeSlider;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,9 +30,12 @@ public class GroupFilterFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_filter, container, false);
 
-        gender = view.findViewById(R.id.gender_chip_group);
+        selectGender = view.findViewById(R.id.gender_chip_group);
+        male = view.findViewById(R.id.male);
+        female = view.findViewById(R.id.female);
+        transgender = view.findViewById(R.id.transgender);
 
-        headline_score = view.findViewById(R.id.headline_score);
+        headlineScore = view.findViewById(R.id.headline_score);
         rangeSlider = view.findViewById(R.id.range_slider);
 
         coffee = view.findViewById(R.id.chip_coffee);
@@ -46,21 +47,31 @@ public class GroupFilterFragment extends Fragment {
         dating = view.findViewById(R.id.chip_dating);
         matrimony = view.findViewById(R.id.chip_matrimony);
 
-        gender.setOnCheckedChangeListener((group, checkedId) -> {
-            if(checkedId == R.id.male){
-                Toast.makeText(getContext(), "male is clicked", Toast.LENGTH_SHORT).show();
-            }else if(checkedId == R.id.female){
-
-            }else{
-
+        selectGender.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(ChipGroup group, int checkedId) {
+                Chip selectedChip = group.findViewById(checkedId);
+                if (selectedChip != null) {
+                    if (selectedChip.getId() == R.id.male) {
+                        male.setChipBackgroundColorResource(male.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                        male.setTextColor(getResources().getColor(male.isSelected() ? android.R.color.white : R.color.black));
+                    }if (selectedChip.getId() == R.id.female) {
+                        female.setChipBackgroundColorResource(female.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                        female.setTextColor(getResources().getColor(female.isSelected() ? android.R.color.white : R.color.black));
+                    }if (selectedChip.getId() == R.id.transgender) {
+                        transgender.setChipBackgroundColorResource(transgender.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                        transgender.setTextColor(getResources().getColor(transgender.isSelected() ? android.R.color.white : R.color.black));
+                    }
+                }
             }
         });
+
 
         rangeSlider.setLabelFormatter(value -> {
             return String.valueOf((int) value); // format the label as an integer value
         });
 
-        rangeSlider.addOnChangeListener((slider, value, fromUser) -> headline_score.setText(slider.getValues().get(0).intValue() + "-" + slider.getValues().get(1).intValue()));
+        rangeSlider.addOnChangeListener((slider, value, fromUser) -> headlineScore.setText(slider.getValues().get(0).intValue() + "-" + slider.getValues().get(1).intValue()));
 
         Chip[] chips = {coffee, business, hobbies, friendship, movies, dining, dating, matrimony};
 
