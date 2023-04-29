@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +16,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.adapter.BriefcaseRecyclerViewAdapter;
 import com.example.myapplication.FilterActivity;
 import com.example.myapplication.model.MyModel;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,12 +27,15 @@ public class BriefcaseFragment extends Fragment {
     private BriefcaseRecyclerViewAdapter adapter;
     private ImageView briefcase_filter;
 
+    private FloatingActionButton fab;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_briefcase, container, false);
 
+        fab = view.findViewById(R.id.fab);
         briefcase_filter = view.findViewById(R.id.briefcase_filter);
 
         briefcase_filter.setOnClickListener(view1 -> {
@@ -59,6 +64,19 @@ public class BriefcaseFragment extends Fragment {
         // Set the adapter for the RecyclerView
         adapter = new BriefcaseRecyclerViewAdapter(myList);
         recyclerView.setAdapter(adapter);
+
+        // Hide floating action button while scrolling the recyclerview
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy > 0 && fab.getVisibility() == View.VISIBLE) {
+                    fab.hide();
+                } else if (dy < 0 && fab.getVisibility() != View.VISIBLE) {
+                    fab.show();
+                }
+            }
+        });
 
         // return view
         return view;

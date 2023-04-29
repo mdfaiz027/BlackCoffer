@@ -61,16 +61,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        app:tint="@color/white"
-        app:backgroundTint="@color/dark_blue"
-        app:srcCompat ="@drawable/add"
-        app:fabSize="normal" />
-
 </RelativeLayout>
