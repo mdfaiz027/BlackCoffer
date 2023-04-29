@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white">
@@ -51,7 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:text="+invite"
+                        android:text="@string/invite"
                         android:textAllCaps="true"
                         android:textColor="@color/dark_blue"
                         android:textSize="16sp"
@@ -61,7 +60,7 @@
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pavan Sindhi"
+                        android:text="@string/pavan_sindhi"
                         android:textColor="@color/dark_blue"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -71,7 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Hyderabad, within 2.2 KM"
+                        android:text="@string/hyderabad_within_2_2_km"
                         android:textColor="@color/dark_blue"
                         android:textSize="14sp" />
 
@@ -101,7 +100,7 @@
                         android:id="@+id/group"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Friendship"
+                        android:text="@string/friendship"
                         android:textColor="@color/dark_blue"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -111,7 +110,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="Hi community! I am open to new connections"
+                        android:text="@string/hi_community_i_am_open_to_new_connections"
                         android:textColor="@color/dark_blue"
                         android:textSize="14sp" />
 

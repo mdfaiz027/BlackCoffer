@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.FilterActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.BriefcaseRecyclerViewAdapter;
-import com.example.myapplication.FilterActivity;
 import com.example.myapplication.model.MyModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
