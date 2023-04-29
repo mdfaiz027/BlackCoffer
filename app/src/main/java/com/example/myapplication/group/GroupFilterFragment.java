@@ -2,21 +2,17 @@ package com.example.myapplication.group;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.slider.RangeSlider;
-
-import java.util.List;
 
 public class GroupFilterFragment extends Fragment {
 
@@ -28,7 +24,7 @@ public class GroupFilterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_filter, container, false);
+        View view = inflater.inflate(R.layout.fragment_group_filter, container, false);
 
         selectGender = view.findViewById(R.id.gender_chip_group);
         male = view.findViewById(R.id.male);
@@ -47,25 +43,21 @@ public class GroupFilterFragment extends Fragment {
         dating = view.findViewById(R.id.chip_dating);
         matrimony = view.findViewById(R.id.chip_matrimony);
 
-        selectGender.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(ChipGroup group, int checkedId) {
-                Chip selectedChip = group.findViewById(checkedId);
-                if (selectedChip != null) {
-                    if (selectedChip.getId() == R.id.male) {
-                        male.setChipBackgroundColorResource(male.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
-                        male.setTextColor(getResources().getColor(male.isSelected() ? android.R.color.white : R.color.black));
-                    }if (selectedChip.getId() == R.id.female) {
-                        female.setChipBackgroundColorResource(female.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
-                        female.setTextColor(getResources().getColor(female.isSelected() ? android.R.color.white : R.color.black));
-                    }if (selectedChip.getId() == R.id.transgender) {
-                        transgender.setChipBackgroundColorResource(transgender.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
-                        transgender.setTextColor(getResources().getColor(transgender.isSelected() ? android.R.color.white : R.color.black));
-                    }
+        selectGender.setOnCheckedChangeListener((group, checkedId) -> {
+            Chip selectedChip = group.findViewById(checkedId);
+            if (selectedChip != null) {
+                if (selectedChip.getId() == R.id.male) {
+                    male.setChipBackgroundColorResource(male.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                    male.setTextColor(getResources().getColor(male.isSelected() ? android.R.color.white : R.color.black));
+                }if (selectedChip.getId() == R.id.female) {
+                    female.setChipBackgroundColorResource(female.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                    female.setTextColor(getResources().getColor(female.isSelected() ? android.R.color.white : R.color.black));
+                }if (selectedChip.getId() == R.id.transgender) {
+                    transgender.setChipBackgroundColorResource(transgender.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                    transgender.setTextColor(getResources().getColor(transgender.isSelected() ? android.R.color.white : R.color.black));
                 }
             }
         });
-
 
         rangeSlider.setLabelFormatter(value -> {
             return String.valueOf((int) value); // format the label as an integer value
@@ -85,4 +77,5 @@ public class GroupFilterFragment extends Fragment {
 
         return view;
     }
+
 }

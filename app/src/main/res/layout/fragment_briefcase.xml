@@ -39,7 +39,7 @@
                 app:searchIcon="@drawable/search_24" />
 
             <ImageView
-                android:id="@+id/filter"
+                android:id="@+id/briefcase_filter"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/filter"

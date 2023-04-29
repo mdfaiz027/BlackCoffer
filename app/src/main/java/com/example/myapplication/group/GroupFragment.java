@@ -35,6 +35,7 @@ public class GroupFragment extends Fragment {
 
         filter.setOnClickListener(view1 -> {
             Intent intent = new Intent(getContext(), GroupFilterActivity.class);
+            intent.putExtra("fragment_index", 0);
             startActivity(intent);
         });
 
