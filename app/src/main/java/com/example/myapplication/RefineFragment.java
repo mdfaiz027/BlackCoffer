@@ -21,7 +21,6 @@ public class RefineFragment extends Fragment {
     private Chip coffee, business, hobbies, friendship, movies, dining, dating, matrimony;
     private TextView characterCountTextView;
     private TextInputEditText textInputEditText;
-
     private final int maxCharacters = 250;
 
     @Override
@@ -31,6 +30,7 @@ public class RefineFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_refine, container, false);
 
         Spinner mySpinner = view.findViewById(R.id.availabilitySpinner);
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.my_spinner_items, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(adapter);

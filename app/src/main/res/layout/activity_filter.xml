@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".group.GroupFilterActivity">
+    tools:context=".FilterActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -32,7 +32,7 @@
             android:layout_marginStart="20dp"
             android:text="Filters"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cancel_button"
             app:layout_constraintTop_toTopOf="parent" />

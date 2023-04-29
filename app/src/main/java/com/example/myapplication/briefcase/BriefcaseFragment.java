@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.BriefcaseRecyclerViewAdapter;
-import com.example.myapplication.group.GroupFilterActivity;
+import com.example.myapplication.FilterActivity;
 import com.example.myapplication.model.MyModel;
 
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class BriefcaseFragment extends Fragment {
         briefcase_filter = view.findViewById(R.id.briefcase_filter);
 
         briefcase_filter.setOnClickListener(view1 -> {
-            Intent intent = new Intent(getContext(), GroupFilterActivity.class);
+            Intent intent = new Intent(getContext(), FilterActivity.class);
             intent.putExtra("fragment_index", 1);
             startActivity(intent);
         });

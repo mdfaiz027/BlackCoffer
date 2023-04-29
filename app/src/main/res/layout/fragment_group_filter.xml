@@ -31,6 +31,7 @@
                 android:layout_marginTop="30dp"
                 android:text="Profession|University|Company"
                 android:textColor="@color/dark_blue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -143,6 +144,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Location"
                 android:textColor="@color/dark_blue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -228,6 +230,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Preference"
                 android:textColor="@color/dark_blue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -484,6 +487,7 @@
                 android:layout_height="wrap_content"
                 android:text="Profile Completion Score"
                 android:textColor="@color/dark_blue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -494,6 +498,7 @@
                 android:layout_height="wrap_content"
                 android:text="0-100"
                 android:textColor="@color/dark_blue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -540,6 +545,7 @@
                 android:layout_marginTop="20dp"
                 android:text="Purpose"
                 android:textColor="@color/dark_blue"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

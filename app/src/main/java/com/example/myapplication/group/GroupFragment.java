@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.myapplication.FilterActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.GroupRecyclerViewAdapter;
 import com.example.myapplication.model.MyModel;
@@ -34,7 +35,7 @@ public class GroupFragment extends Fragment {
         filter = view.findViewById(R.id.filter);
 
         filter.setOnClickListener(view1 -> {
-            Intent intent = new Intent(getContext(), GroupFilterActivity.class);
+            Intent intent = new Intent(getContext(), FilterActivity.class);
             intent.putExtra("fragment_index", 0);
             startActivity(intent);
         });

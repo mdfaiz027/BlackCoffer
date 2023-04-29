@@ -1,4 +1,4 @@
-package com.example.myapplication.group;
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,16 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.example.myapplication.MainActivity;
-import com.example.myapplication.R;
 import com.example.myapplication.briefcase.BriefcaseFilterFragment;
-import com.example.myapplication.briefcase.BriefcaseFragment;
 import com.example.myapplication.group.GroupFilterFragment;
+import com.example.myapplication.group.GroupFragment;
 import com.example.myapplication.market.MarketFilterFragment;
-import com.example.myapplication.market.MarketFragment;
 
-public class GroupFilterActivity extends AppCompatActivity {
-    private static final String TAG = GroupFilterActivity.class.getSimpleName();
+public class FilterActivity extends AppCompatActivity {
+    private static final String TAG = FilterActivity.class.getSimpleName();
     private ImageView cancel_btn;
 
     @Override
@@ -46,8 +43,6 @@ public class GroupFilterActivity extends AppCompatActivity {
         cancel_btn = findViewById(R.id.cancel_button);
 
         cancel_btn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
             finish();
         });
 

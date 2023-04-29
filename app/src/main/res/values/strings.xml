@@ -11,5 +11,31 @@
         <item>SOS | Emergency! Need Assistance! HELP</item>
     </string-array>
 
+    <string-array name="my_briefcase_spinner_items">
+        <item>Business Services</item>
+        <item>Utility Services</item>
+        <item>Government Services</item>
+        <item>Medical Services</item>
+        <item>Religious Services</item>
+        <item>Academics</item>
+        <item>Educational Services</item>
+        <item>Defence Services</item>
+        <item>Banking Services</item>
+        <item>Social Volunteer</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="my_market_spinner_items">
+        <item>Restaurants &amp; Coffee shops</item>
+        <item>Shoes &amp; Accessories</item>
+        <item>Jewellers</item>
+        <item>Saloons</item>
+        <item>Gymnasium</item>
+        <item>Chemists &amp; Druggists</item>
+        <item>Automobile Dealers</item>
+        <item>Movie Theaters</item>
+        <item>Home Appliances</item>
+    </string-array>
+
 
 </resources>

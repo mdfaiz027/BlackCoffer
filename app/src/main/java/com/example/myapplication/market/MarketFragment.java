@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.myapplication.group.GroupFilterActivity;
+import com.example.myapplication.FilterActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.MarketRecyclerViewAdapter;
 import com.example.myapplication.model.MyModel;
@@ -35,7 +35,7 @@ public class MarketFragment extends Fragment {
         market_filter = view.findViewById(R.id.market_filter);
 
         market_filter.setOnClickListener(view1 -> {
-            Intent intent = new Intent(getContext(), GroupFilterActivity.class);
+            Intent intent = new Intent(getContext(), FilterActivity.class);
             intent.putExtra("fragment_index", 2);
             startActivity(intent);
         });
