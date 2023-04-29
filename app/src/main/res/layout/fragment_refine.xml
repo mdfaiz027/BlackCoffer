@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -41,31 +46,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/availabilitySpinner" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        app:boxCornerRadiusBottomEnd="10dp"
-        app:boxCornerRadiusBottomStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp"
-        app:boxCornerRadiusTopStart="10dp"
+        android:padding="10dp"
         app:endIconMode="clear_text"
+        android:text="Hi community! I am open to new connections \uD83D\uDE0A"
+        android:gravity="start|top"
+        android:background="@drawable/border2"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/status">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hi community! I am open to new connections \uD83D\uDE0A"
-            android:gravity="start|top"
-            android:textSize="18sp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/status"/>
 
     <TextView
         android:id="@+id/characterCountTextView"
@@ -76,7 +72,7 @@
         android:text="0/250"
         android:textColor="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <TextView
         android:id="@+id/distance"
@@ -88,7 +84,7 @@
         android:textColor="@color/dark_blue"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <com.google.android.material.slider.Slider
         android:id="@+id/slider"
@@ -238,17 +234,21 @@
             app:layout_constraintTop_toBottomOf="@+id/chip_movies" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>\
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/save_explore"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/dark_blue"
+        android:text="@string/save_explore"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

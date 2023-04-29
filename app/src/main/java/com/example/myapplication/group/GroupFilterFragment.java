@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.google.android.material.chip.Chip;
@@ -16,7 +18,7 @@ import com.google.android.material.slider.RangeSlider;
 
 public class GroupFilterFragment extends Fragment {
 
-    private Chip coffee, business, hobbies, friendship, movies, dining, dating, matrimony, male, female, transgender;
+    private Chip coffee, business, hobbies, friendship, movies, dining, dating, matrimony;
     private ChipGroup selectGender;
     private TextView headlineScore;
     private RangeSlider rangeSlider;
@@ -27,9 +29,6 @@ public class GroupFilterFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_group_filter, container, false);
 
         selectGender = view.findViewById(R.id.gender_chip_group);
-        male = view.findViewById(R.id.male);
-        female = view.findViewById(R.id.female);
-        transgender = view.findViewById(R.id.transgender);
 
         headlineScore = view.findViewById(R.id.headline_score);
         rangeSlider = view.findViewById(R.id.range_slider);
@@ -47,14 +46,15 @@ public class GroupFilterFragment extends Fragment {
             Chip selectedChip = group.findViewById(checkedId);
             if (selectedChip != null) {
                 if (selectedChip.getId() == R.id.male) {
-                    male.setChipBackgroundColorResource(male.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
-                    male.setTextColor(getResources().getColor(male.isSelected() ? android.R.color.white : R.color.black));
-                }if (selectedChip.getId() == R.id.female) {
-                    female.setChipBackgroundColorResource(female.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
-                    female.setTextColor(getResources().getColor(female.isSelected() ? android.R.color.white : R.color.black));
-                }if (selectedChip.getId() == R.id.transgender) {
-                    transgender.setChipBackgroundColorResource(transgender.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
-                    transgender.setTextColor(getResources().getColor(transgender.isSelected() ? android.R.color.white : R.color.black));
+                    Toast.makeText(getContext(), "Male", Toast.LENGTH_SHORT).show();
+                    selectedChip.setChipBackgroundColorResource(selectedChip.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                    selectedChip.setTextColor(getResources().getColor(selectedChip.isSelected() ? android.R.color.white : R.color.black));
+                }else if (selectedChip.getId() == R.id.female) {
+                    selectedChip.setChipBackgroundColorResource(selectedChip.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                    selectedChip.setTextColor(getResources().getColor(selectedChip.isSelected() ? android.R.color.white : R.color.black));
+                }else if (selectedChip.getId() == R.id.transgender) {
+                    selectedChip.setChipBackgroundColorResource(selectedChip.isSelected() ? R.color.chip_selected_color : R.color.chip_default_color);
+                    selectedChip.setTextColor(getResources().getColor(selectedChip.isSelected() ? android.R.color.white : R.color.black));
                 }
             }
         });

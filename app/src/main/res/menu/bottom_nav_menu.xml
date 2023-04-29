@@ -11,7 +11,7 @@
     <item
         android:id="@+id/network"
         android:title="Network"
-        android:icon="@drawable/network"/>
+        android:icon="@drawable/network2"/>
 
     <item
         android:id="@+id/chat"
